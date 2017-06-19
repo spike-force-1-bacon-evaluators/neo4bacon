@@ -19,8 +19,8 @@ prep: ## download dependencies and format code
 
 image: ## build docker image and push image to registry
 	@docker build -t alesr/neo4bacon -f resources/prod/Dockerfile .
-	# @docker tag alesr/neo4bacon alesr/neo4bacon:latest
-	# @docker push alesr/neo4bacon
+	@docker tag alesr/neo4bacon alesr/neo4bacon:latest
+	@docker push alesr/neo4bacon
 
 run: ## deploy application container
 	@docker run --rm -d -p 50051:50051 --name neo4bacon alesr/neo4bacon
@@ -34,4 +34,3 @@ build/linux: prep ## build linux binary
 test: ## run unit tests
 	@docker build -t neo4bacon-test -f resources/test/Dockerfile .
 	@docker run --rm neo4bacon-test
-
