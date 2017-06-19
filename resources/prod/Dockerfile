@@ -3,7 +3,7 @@ FROM golang:1.8.3-alpine3.6
 RUN apk update && \
   apk add git
 
-WORKDIR /go/src/github.com/bacon/neo4bacon
+WORKDIR /go/src/github.com/spike-force-1-bacon-evaluators/neo4bacon
 
 COPY . .
 
