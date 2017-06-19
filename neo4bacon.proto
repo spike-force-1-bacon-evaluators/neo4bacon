@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package api;
+
+service Neo4bacon {
+  rpc List(Empty) returns (RestaurantList) {}
+}
+
+message Empty {}
+
+message RestaurantList {
+  repeated Restaurant restaurants = 1;
+}
+
+message Restaurant {
+  string id = 1;
+  string name = 2;
+	int32 lastpos = 3;
+	int32 newpos = 4;
+	string change = 5;
+}
