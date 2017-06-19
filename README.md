@@ -19,6 +19,6 @@ build/osx                      build osx binary
 grpc                           generate gRPC code
 image                          build docker image and push image to registry
 prep                           download dependencies and format code
-run                            run application container
+run                            deploy application container
 test                           run unit tests
 ```

@@ -22,7 +22,7 @@ image: ## build docker image and push image to registry
 	# @docker tag alesr/neo4bacon alesr/neo4bacon:latest
 	# @docker push alesr/neo4bacon
 
-deploy: ## deploy docker container
+run: ## deploy application container
 	@docker run --rm -d -p 50051:50051 --name neo4bacon alesr/neo4bacon
 
 build/osx: prep ## build osx binary
@@ -35,6 +35,3 @@ test: ## run unit tests
 	@docker build -t neo4bacon-test -f resources/test/Dockerfile .
 	@docker run --rm neo4bacon-test
 
-run: ## run application container
-	@docker build -t alesr/neo4bacon -f resources/prod/Dockerfile .
-	@docker run --rm alesr/neo4bacon
