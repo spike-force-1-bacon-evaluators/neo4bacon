@@ -14,7 +14,7 @@ type server struct{}
 // List calls the backend server to retrieve a new restaurant raw list
 func (server) List(context.Context, *Empty) (*RestaurantList, error) {
 
-	// restaurants, err := Run()
+	// restaurants, err := Get()
 	// if err != nil {
 	// 	return nil, fmt.Errorf("could not list restaurants: %s", err)
 	// }
