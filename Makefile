@@ -23,7 +23,7 @@ image: ## build docker image and push image to registry
 	@docker push alesr/neo4bacon
 
 run: ## deploy application container
-	@docker run --rm -d -p 50051:50051 --name neo4bacon alesr/neo4bacon
+	@docker run --rm -d --net baconnet --name neo4bacon alesr/neo4bacon
 
 build/osx: prep ## build osx binary
 	@go build
