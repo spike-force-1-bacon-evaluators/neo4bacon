@@ -18,4 +18,6 @@ RUN go fmt ./...
 # Install application
 RUN go install -v ./...
 
+EXPOSE 50051
+
 CMD ["neo4bacon"]
